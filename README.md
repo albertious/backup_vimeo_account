@@ -82,7 +82,7 @@ yt-dlp "https://vimeo.com/YOURUSERNAME/videos" \
   --merge-output-format mp4 \
   -o "%(upload_date)s_%(title)s.%(ext)s"
 ```
-Or instead, you can try downloading the original upload format like this:
+Or instead, you can try downloading the original upload format like this with the format set as "source/original":
 ```bash
 yt-dlp "https://vimeo.com/YOURUSERNAME/videos" \
   --cookies "cookies.txt" \
@@ -90,7 +90,7 @@ yt-dlp "https://vimeo.com/YOURUSERNAME/videos" \
   --merge-output-format mp4 \
   -o "%(upload_date)s_%(title)s.%(ext)s"
 ```
-I had varying results.
+I had varying results. Perhaps this is to do with individual video settings?
 
 ## Output
 
