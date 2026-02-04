@@ -1,15 +1,14 @@
 # backup_vimeo_account
 
 How to back up your Vimeo account using **yt-dlp**.
+So I used this method with the cookies, because if you have unlisted/private videos you will 
 
-## Overview
-
-This guide downloads all videos from a Vimeo user page using `yt-dlp` and an authenticated `cookies.txt`.
+Essentially this mode downloads all videos from a Vimeo user page using `yt-dlp` and an authenticated `cookies.txt`.
 
 ## Requirements
 
 - A Vimeo account
-- `yt-dlp` installed and available in your `PATH`
+- `yt-dlp` installed and available in your `PATH` (see the verify stage below!!)
 - A `cookies.txt` exported from a browser session where you are logged into Vimeo
 - macOS or Linux terminal
 
@@ -33,15 +32,16 @@ python3 -m pip install -U yt-dlp
 ```
 
 Verify:
-
+incommmand line or terminal run:
 ```bash
 yt-dlp --version
 ```
+if successfully installed, it will give you a version number for the yt-dlp installation.
 
 ## 2) Export Vimeo cookies
 
 You must export your logged-in Vimeo session cookies to a file named `cookies.txt`.
-This allows `yt-dlp` to access private, unlisted, or account-owned videos.
+Unfortunately you need the cookies.txt to provide credentials to `yt-dlp` so it can access private, unlisted, or account-owned videos.
 
 ### Steps
 
@@ -54,21 +54,20 @@ This allows `yt-dlp` to access private, unlisted, or account-owned videos.
 
 ### Browser notes
 
-- Chromium-based browsers (Chrome, Brave, Edge) tend to work more reliably for Vimeo cookie export.
-- Firefox can work, but some users report inconsistent results depending on the extension.
+- Chromium-based browsers (Chrome, Brave, Edge) tend to work more reliably for Vimeo cookie export - i dont know why, maybe I used the wrong extensions for firefox.
 - If downloads fail later, try:
   - Re-exporting cookies
-  - Using a different extension
-  - Switching browsers and exporting again
+  - Using a different cookies exporter extension
+  - Switching browsers and exporting again?
 
-Place `cookies.txt` in the destination folder where you want your videos saved.
+Place `cookies.txt` in the destination folder where you want your videos saved (you /PATH/TO/SAVE/ where you will run the terminal commandline stuff later)
 
 **Keep `cookies.txt` private.**  
-Anyone with this file may be able to access your account.
+Anyone with this file may be able to access your account. Don't share it or screengrabs of it online, you dingus!
 
 ## 3) Download your videos
 
-Open a terminal and change into your destination folder:
+Open a terminal/commandline and change into your destination folder:
 
 ```bash
 cd "/PATH/TO/SAVE/"
