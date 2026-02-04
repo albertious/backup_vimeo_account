@@ -1,13 +1,13 @@
 # backup_vimeo_account
 
 How to back up your Vimeo account using **yt-dlp**.
-So I used this method with the cookies, because if you have unlisted/private videos you will 
-
 Essentially this mode downloads all videos from a Vimeo user page using `yt-dlp` and an authenticated `cookies.txt`.
+
+So I used this method with the cookies, because if you have unlisted/private videos yt-dlp cannot access these non-public files. The cookies method also means the username and password is taken care of already. Cookies will expire, so if you havent used it in a while, you might need to reexport them. Anyway, details on that below too.
 
 ## Requirements
 
-- A Vimeo account
+- A Vimeo account (of course!)
 - `yt-dlp` installed and available in your `PATH` (see the verify stage below!!)
 - A `cookies.txt` exported from a browser session where you are logged into Vimeo
 - macOS or Linux terminal
@@ -16,7 +16,6 @@ Essentially this mode downloads all videos from a Vimeo user page using `yt-dlp`
 
 ### Windows
 Install `yt-dlp` so your system recognizes it as a command.
-
 Official instructions: https://github.com/yt-dlp/yt-dlp
 
 ### macOS (Homebrew)
