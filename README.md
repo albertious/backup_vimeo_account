@@ -15,6 +15,7 @@ This guide downloads all videos from a Vimeo user page using `yt-dlp` and an aut
 
 ## 1) Install yt-dlp
 
+### Windows
 Install `yt-dlp` so your system recognizes it as a command.
 
 Official instructions: https://github.com/yt-dlp/yt-dlp
@@ -39,11 +40,31 @@ yt-dlp --version
 
 ## 2) Export Vimeo cookies
 
-1. Log into Vimeo in your browser.
-2. Export your cookies to a file named `cookies.txt`.
-3. Place `cookies.txt` in the destination folder where you want your videos saved.
+You must export your logged-in Vimeo session cookies to a file named `cookies.txt`.
+This allows `yt-dlp` to access private, unlisted, or account-owned videos.
 
-> Keep `cookies.txt` private. It can grant access to your account.
+### Steps
+
+1. Log into Vimeo in your web browser.
+2. Install a browser extension that can export cookies in **Netscape cookies.txt format**.
+   - Search your browser’s extension store for tools like “Get cookies.txt”.
+   - There are multiple extensions that do this; results may vary.
+3. Use the extension to export cookies for `vimeo.com`.
+4. Save the exported file as `cookies.txt`.
+
+### Browser notes
+
+- Chromium-based browsers (Chrome, Brave, Edge) tend to work more reliably for Vimeo cookie export.
+- Firefox can work, but some users report inconsistent results depending on the extension.
+- If downloads fail later, try:
+  - Re-exporting cookies
+  - Using a different extension
+  - Switching browsers and exporting again
+
+Place `cookies.txt` in the destination folder where you want your videos saved.
+
+**Keep `cookies.txt` private.**  
+Anyone with this file may be able to access your account.
 
 ## 3) Download your videos
 
@@ -75,9 +96,11 @@ YYYYMMDD_Title.mp4
 
 ## Notes / Troubleshooting
 
-- If private/unlisted videos fail to download, re-export `cookies.txt` and try again.
-- Some titles may contain characters that your filesystem changes/strips automatically; this is expected.
+- If private or unlisted videos fail to download, re-export `cookies.txt` and try again.
+- Vimeo may invalidate cookies over time; re-export if errors appear.
+- Some titles may contain characters that your filesystem modifies automatically.
 
 ## Disclaimer
 
-Use this to back up **your own** content and follow Vimeo’s Terms of Service and applicable copyright laws.
+Use this to back up **your own** content only.  
+Respect Vimeo’s Terms of Service and applicable copyright laws.
