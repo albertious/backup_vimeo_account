@@ -82,16 +82,21 @@ yt-dlp "https://vimeo.com/YOURUSERNAME/videos" \
   --merge-output-format mp4 \
   -o "%(upload_date)s_%(title)s.%(ext)s"
 ```
+Or instead, you can try downloading the original upload format like this:
+```bash
+yt-dlp "https://vimeo.com/YOURUSERNAME/videos" \
+  --cookies "cookies.txt" \
+  --format "source/original" \
+  --merge-output-format mp4 \
+  -o "%(upload_date)s_%(title)s.%(ext)s"
+```
+I had varying results.
 
 ## Output
 
 - Downloads the highest available quality (`bestvideo+bestaudio` when available)
 - Merges into `.mp4`
-- Filenames:
-
-```
-YYYYMMDD_Title.mp4
-```
+- Filenames should save as: YYYYMMDD_Title.mp4
 
 ## Notes / Troubleshooting
 
